@@ -3,6 +3,7 @@ package address.model;
 /**
  * Created by Bobbie on 6/7/2016.
  */
+
 import javafx.beans.property.*;
 
 import java.time.LocalDate;
@@ -108,6 +109,7 @@ public class Person {
         return city;
     }
 
+    //@XmlJavaTypeAdapter(LocalDateAdapter.class)
     public LocalDate getBirthday() {
         return birthday.get();
     }

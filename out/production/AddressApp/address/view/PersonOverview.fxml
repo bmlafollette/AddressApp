@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.PersonOverviewController">
    <children>
-      <SplitPane dividerPositions="0.47333333333333333" layoutX="-6.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.47333333333333333" layoutX="-6.0" layoutY="-7.0" prefHeight="405.0" prefWidth="605.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-7.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -60,7 +60,7 @@
                         <ButtonBar prefHeight="40.0" prefWidth="200.0" />
                      </children>
                   </GridPane>
-                  <ButtonBar layoutX="95.0" layoutY="318.0" prefHeight="40.0" prefWidth="302.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                  <ButtonBar layoutX="95.0" layoutY="318.0" prefHeight="40.0" prefWidth="302.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
                     <buttons>
                       <Button minWidth="61.0" mnemonicParsing="false" onAction="#handleNewPerson" prefHeight="33.0" text="New" />
                         <Button minWidth="47.0" mnemonicParsing="false" onAction="#handleEditPerson" prefHeight="33.0" text="Edit" />

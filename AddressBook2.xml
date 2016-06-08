@@ -3,6 +3,7 @@
     <person>
         <birthday>1983-11-19</birthday>
         <city>Connersville</city>
+        <email>billie@gmail.com</email>
         <firstName>Billie</firstName>
         <lastName>Koger</lastName>
         <postalCode>47331</postalCode>
@@ -12,10 +13,31 @@
     <person>
         <birthday>1954-11-16</birthday>
         <city>Connersville</city>
+        <email>ellen@gmail.com</email>
         <firstName>Ellen</firstName>
         <lastName>Gibbs</lastName>
         <postalCode>47331</postalCode>
         <state>IN</state>
         <street>5599 W. Longwood Road</street>
+    </person>
+    <person>
+        <birthday>1983-01-11</birthday>
+        <city>Belleville</city>
+        <email>jodie@email.com</email>
+        <firstName>Jodie</firstName>
+        <lastName>Bulmer</lastName>
+        <postalCode>62221</postalCode>
+        <state>IL</state>
+        <street>4 Southland Court</street>
+    </person>
+    <person>
+        <birthday>1974-03-19</birthday>
+        <city>Shelbyville</city>
+        <email>bruse@gmail.com</email>
+        <firstName>Bruce</firstName>
+        <lastName>Bentley</lastName>
+        <postalCode>46176</postalCode>
+        <state>IN</state>
+        <street>35 E. Pennsylvania Street</street>
     </person>
 </persons>

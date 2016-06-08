@@ -4,10 +4,7 @@ package address;/**
 
 import address.model.Person;
 import address.model.PersonListWrapper;
-import address.view.BirthdayStatisticsController;
-import address.view.PersonEditDialogController;
-import address.view.PersonOverviewController;
-import address.view.RootLayoutController;
+import address.view.*;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -79,6 +76,7 @@ public class MainApp extends Application {
         initRootLayout();
 
         showPersonOverview();
+        //showFrontPage();
 
 
     }
@@ -113,6 +111,28 @@ public class MainApp extends Application {
             loadPersonDataFromFile(file);
         }
     }
+
+//    /**
+//     * Shows the front page inside the root layout.
+//     */
+//    public void showFrontPage() {
+//        try {
+//            // Load front page.
+//            FXMLLoader loader = new FXMLLoader();
+//            loader.setLocation(MainApp.class.getResource("view/FontPage.fxml"));
+//            AnchorPane frontPage = (AnchorPane) loader.load();
+//
+//            // Set front page into the center of root layout.
+//            rootLayout.setCenter(frontPage);
+//
+//            // Give the controller access to the main app.
+//            FrontPageController controller = loader.getController();
+//            controller.setMainApp(this);
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     /**
      * Shows the person overview inside the root layout.

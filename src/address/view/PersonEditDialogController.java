@@ -31,6 +31,8 @@ public class PersonEditDialogController {
     @FXML
     private TextField postalCodeField;
     @FXML
+    private TextField emailField;
+    @FXML
     private TextField birthdayField;
 
 
@@ -72,6 +74,7 @@ public class PersonEditDialogController {
         cityField.setText(person.getCity());
         stateField.setText(person.getState());
         postalCodeField.setText(Integer.toString(person.getPostalCode()));
+        emailField.setText(person.getEmail());
         birthdayField.setText(DateUtil.format(person.getBirthday()));
         birthdayField.setPromptText("dd.mm.yyyy");
     }
@@ -97,6 +100,7 @@ public class PersonEditDialogController {
             person.setCity(cityField.getText());
             person.setState(stateField.getText());
             person.setPostalCode(Integer.parseInt(postalCodeField.getText()));
+            person.setEmail(emailField.getText());
             person.setBirthday(DateUtil.parse(birthdayField.getText()));
 
             okClicked = true;
@@ -145,6 +149,10 @@ public class PersonEditDialogController {
             } catch (NumberFormatException e) {
                 errorMessage += "No valid postal code (must be an integer)!\n";
             }
+        }
+
+        if (emailField.getText() == null || emailField.getText().length() == 0) {
+            errorMessage += "No valid email!\n";
         }
 
         if (birthdayField.getText() == null || birthdayField.getText().length() == 0) {

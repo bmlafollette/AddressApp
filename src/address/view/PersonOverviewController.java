@@ -3,14 +3,14 @@ package address.view;
 /**
  * Created by Bobbie on 6/7/2016.
  */
+import address.MainApp;
+import address.model.Person;
 import address.util.DateUtil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import address.MainApp;
-import address.model.Person;
 
 
 /**
@@ -36,6 +36,8 @@ public class PersonOverviewController {
     private Label stateLabel;
     @FXML
     private Label postalCodeLabel;
+    @FXML
+    private Label emailLabel;
     @FXML
     private Label birthdayLabel;
 
@@ -71,6 +73,7 @@ public class PersonOverviewController {
         // Listen for selection changes and show the person details when changed.
         personTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showPersonDetails(newValue));
+
     }
 
     /**
@@ -100,6 +103,7 @@ public class PersonOverviewController {
             cityLabel.setText(person.getCity());
             stateLabel.setText(person.getState());
             postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
+            emailLabel.setText(person.getEmail());
             birthdayLabel.setText(DateUtil.format(person.getBirthday()));
         } else {
             // Person is null, remove all the text.
@@ -109,6 +113,7 @@ public class PersonOverviewController {
             cityLabel.setText("");
             stateLabel.setText("");
             postalCodeLabel.setText("");
+            emailLabel.setText("");
             birthdayLabel.setText("");
         }
     }

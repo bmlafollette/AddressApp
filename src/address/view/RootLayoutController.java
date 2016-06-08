@@ -7,6 +7,7 @@ package address.view;
 import address.MainApp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -103,7 +104,7 @@ public class RootLayoutController {
      */
     @FXML
     private void handleAbout() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("AddressApp");
         alert.setHeaderText("About");
         alert.setContentText("Created By: Bobbie LaFollette\nWebsite: http://code.makery.ch");

@@ -27,6 +27,7 @@ public class Person {
     private final StringProperty city;
     private final StringProperty state;
     private final IntegerProperty postalCode;
+    private final StringProperty email;
     private final ObjectProperty<LocalDate> birthday;
 
     /**
@@ -34,7 +35,7 @@ public class Person {
      */
     public Person() {
         this(null, null);
-//        this(null, null, null, null, null, null);
+//        this(null, null, null, null, null, null, null);
     }
 
     /**
@@ -43,7 +44,7 @@ public class Person {
      * @param firstName
      * @param lastName
      */
-    //public Person(String firstName, String lastName, String street, String city, String state, Integer postalCode) {
+    //public Person(String firstName, String lastName, String street, String city, String state, String email, Integer postalCode) {
     public Person(String firstName, String lastName) {
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
@@ -51,12 +52,14 @@ public class Person {
 //        this.city = new SimpleStringProperty(city);
 //        this.state = new SimpleStringProperty(state);
 //        this.postalCode = new SimpleIntegerProperty(postalCode);
+//        this.email = new SimpleStringProperty(email);
 
         // Some initial dummy data, just for convenient testing.
         this.street = new SimpleStringProperty("Street");
         this.city = new SimpleStringProperty("City");
         this.state = new SimpleStringProperty("State");
         this.postalCode = new SimpleIntegerProperty(12345);
+        this.email = new SimpleStringProperty("Email");
         this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1900, 1, 1));
     }
 
@@ -134,6 +137,18 @@ public class Person {
 
     public IntegerProperty postalCodeProperty() {
         return postalCode;
+    }
+
+    public String getEmail() {
+        return email.get();
+    }
+
+    public void setEmail(String email) {
+        this.email.set(email);
+    }
+
+    public StringProperty emailProperty() {
+        return email;
     }
 
     @XmlJavaTypeAdapter(LocalDateAdapter.class)

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persons>
+    <person>
+        <birthday>1983-11-19</birthday>
+        <city>Connersville</city>
+        <firstName>Billie</firstName>
+        <lastName>Koger</lastName>
+        <postalCode>47331</postalCode>
+        <state>Indiana</state>
+        <street>712 Woodland Drive</street>
+    </person>
+    <person>
+        <birthday>1954-11-16</birthday>
+        <city>Connersville</city>
+        <firstName>Ellen</firstName>
+        <lastName>Gibbs</lastName>
+        <postalCode>47331</postalCode>
+        <state>IN</state>
+        <street>5599 W. Longwood Road</street>
+    </person>
+</persons>

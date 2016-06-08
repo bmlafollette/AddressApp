@@ -4,21 +4,29 @@ package address.model;
  * Created by Bobbie on 6/7/2016.
  */
 
+import address.util.LocalDateAdapter;
 import javafx.beans.property.*;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 /**
  * Model class for a Person.
  *
+ * Use StringProperty when the variable is going to be observed by others.
+ * You also can observe it by attaching a listener. You can use this variable in bindings
+ * with other observable objects of JavaFX. In some circumstances it is mandatory to use
+ * JavaFX Property, like Person list rendered with tableView which is editable.
+ * To reflect the changes immediately in edited cell, the underlying bound field should be a property.
  */
 public class Person {
 
     private final StringProperty firstName;
     private final StringProperty lastName;
     private final StringProperty street;
-    private final IntegerProperty postalCode;
     private final StringProperty city;
+    private final StringProperty state;
+    private final IntegerProperty postalCode;
     private final ObjectProperty<LocalDate> birthday;
 
     /**
@@ -26,6 +34,7 @@ public class Person {
      */
     public Person() {
         this(null, null);
+//        this(null, null, null, null, null, null);
     }
 
     /**
@@ -34,15 +43,21 @@ public class Person {
      * @param firstName
      * @param lastName
      */
+    //public Person(String firstName, String lastName, String street, String city, String state, Integer postalCode) {
     public Person(String firstName, String lastName) {
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
+//        this.street = new SimpleStringProperty(street);
+//        this.city = new SimpleStringProperty(city);
+//        this.state = new SimpleStringProperty(state);
+//        this.postalCode = new SimpleIntegerProperty(postalCode);
 
         // Some initial dummy data, just for convenient testing.
-        this.street = new SimpleStringProperty("some street");
-        this.postalCode = new SimpleIntegerProperty(1234);
-        this.city = new SimpleStringProperty("some city");
-        this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 2, 21));
+        this.street = new SimpleStringProperty("Street");
+        this.city = new SimpleStringProperty("City");
+        this.state = new SimpleStringProperty("State");
+        this.postalCode = new SimpleIntegerProperty(12345);
+        this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1900, 1, 1));
     }
 
     /**
@@ -85,18 +100,6 @@ public class Person {
         return street;
     }
 
-    public int getPostalCode() {
-        return postalCode.get();
-    }
-
-    public void setPostalCode(int postalCode) {
-        this.postalCode.set(postalCode);
-    }
-
-    public IntegerProperty postalCodeProperty() {
-        return postalCode;
-    }
-
     public String getCity() {
         return city.get();
     }
@@ -109,7 +112,31 @@ public class Person {
         return city;
     }
 
-    //@XmlJavaTypeAdapter(LocalDateAdapter.class)
+    public String getState() {
+        return state.get();
+    }
+
+    public void setState(String state) {
+        this.state.set(state);
+    }
+
+    public StringProperty stateProperty() {
+        return state;
+    }
+
+    public int getPostalCode() {
+        return postalCode.get();
+    }
+
+    public void setPostalCode(int postalCode) {
+        this.postalCode.set(postalCode);
+    }
+
+    public IntegerProperty postalCodeProperty() {
+        return postalCode;
+    }
+
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     public LocalDate getBirthday() {
         return birthday.get();
     }

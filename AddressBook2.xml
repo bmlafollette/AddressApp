@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <persons>
     <person>
-        <birthday>1983-11-19</birthday>
-        <city>Connersville</city>
-        <email>billie@gmail.com</email>
-        <firstName>Billie</firstName>
-        <lastName>Koger</lastName>
-        <postalCode>47331</postalCode>
-        <state>Indiana</state>
-        <street>712 Woodland Drive</street>
+        <birthday>1950-01-01</birthday>
+        <city>New York</city>
+        <email>trump@gmail.com</email>
+        <firstName>Donald</firstName>
+        <lastName>Trump</lastName>
+        <postalCode>10001</postalCode>
+        <state>NY</state>
+        <street>123 Trump Drive</street>
     </person>
     <person>
-        <birthday>1954-11-16</birthday>
-        <city>Connersville</city>
-        <email>ellen@gmail.com</email>
-        <firstName>Ellen</firstName>
-        <lastName>Gibbs</lastName>
-        <postalCode>47331</postalCode>
-        <state>IN</state>
-        <street>5599 W. Longwood Road</street>
+        <birthday>1950-05-01</birthday>
+        <city>Bethesda</city>
+        <email>hillary@gmail.com</email>
+        <firstName>Hillary</firstName>
+        <lastName>Clinton</lastName>
+        <postalCode>20814</postalCode>
+        <state>MD</state>
+        <street>123 Hillary Drive</street>
     </person>
     <person>
-        <birthday>1983-01-11</birthday>
-        <city>Belleville</city>
-        <email>jodie@email.com</email>
-        <firstName>Jodie</firstName>
-        <lastName>Bulmer</lastName>
-        <postalCode>62221</postalCode>
-        <state>IL</state>
-        <street>4 Southland Court</street>
+        <birthday>1950-08-01</birthday>
+        <city>Burlington</city>
+        <email>bernie@gmail.com</email>
+        <firstName>Bernie</firstName>
+        <lastName>Sanders</lastName>
+        <postalCode>5401</postalCode>
+        <state>VT</state>
+        <street>123 Bernie Court</street>
     </person>
     <person>
-        <birthday>1974-03-19</birthday>
-        <city>Shelbyville</city>
-        <email>bruse@gmail.com</email>
-        <firstName>Bruce</firstName>
-        <lastName>Bentley</lastName>
-        <postalCode>46176</postalCode>
-        <state>IN</state>
-        <street>35 E. Pennsylvania Street</street>
+        <birthday>1955-10-01</birthday>
+        <city>Houston</city>
+        <email>cruz@gmail.com</email>
+        <firstName>Ted</firstName>
+        <lastName>Cruz</lastName>
+        <postalCode>77001</postalCode>
+        <state>TX</state>
+        <street>123 Cruz Avenue</street>
     </person>
 </persons>

@@ -16,7 +16,7 @@ public class FrontPageController {
     // Reference to the main application.
     private MainApp mainApp;
 
-    private boolean continueClicked = false;
+    private boolean continueClicked = true;
 
     /**
      * The constructor.
@@ -51,8 +51,6 @@ public class FrontPageController {
 
         if (continueClicked) {
             mainApp.showPersonOverview();
-        } else {
-
         }
     }
 }

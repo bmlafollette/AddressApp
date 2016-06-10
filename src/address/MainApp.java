@@ -75,8 +75,8 @@ public class MainApp extends Application {
 
         initRootLayout();
 
-        showPersonOverview();
-        //showFrontPage();
+        //showPersonOverview();
+        showFrontPage();
 
 
     }
@@ -112,27 +112,28 @@ public class MainApp extends Application {
         }
     }
 
-//    /**
-//     * Shows the front page inside the root layout.
-//     */
-//    public void showFrontPage() {
-//        try {
-//            // Load front page.
-//            FXMLLoader loader = new FXMLLoader();
-//            loader.setLocation(MainApp.class.getResource("view/FontPage.fxml"));
-//            AnchorPane frontPage = (AnchorPane) loader.load();
-//
-//            // Set front page into the center of root layout.
-//            rootLayout.setCenter(frontPage);
-//
-//            // Give the controller access to the main app.
-//            FrontPageController controller = loader.getController();
-//            controller.setMainApp(this);
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    /**
+     * Shows the front page inside the root layout.
+     */
+    public void showFrontPage() {
+
+        try {
+            // Load front page.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/FrontPage.fxml"));
+            AnchorPane frontPage = (AnchorPane) loader.load();
+
+            // Set front page into the center of root layout.
+            rootLayout.setCenter(frontPage);
+
+            // Give the controller access to the main app.
+            FrontPageController controller = loader.getController();
+            controller.setMainApp(this);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Shows the person overview inside the root layout.
